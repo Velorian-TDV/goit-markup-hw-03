@@ -1,0 +1,332 @@
+/* ------------------------------------------------------------------- */
+/* Global */
+/* ------------------------------------------------------------------- */
+:root{
+    /* CTAs, Focused, Active states, Links */
+    --primary-brand: #4D5AE5;
+
+    /* CTAs */
+    --pressed-state: #404BBF;
+    
+    /* Overlays, Shadows, Headings */
+    --dark: #2E2F42;
+
+    /* Valid fields, Success messages */
+    --success: #31D0AA;
+
+    /* Body text */
+    --text: #434455;
+
+    /* Helper text, Deemphasized text */
+    --subtle-text: #8E8F99;
+
+    /* Accent color, Hairlines, Subtle backgrounds */
+    --accent: #E7E9FC;
+
+    /* Light mode backgrounds, Light mode Dialogs/alerts */
+    --light: #F4F4FD;
+
+    /* Overlay */
+    --modal-overlay: #2E2F42;
+
+    /* Hero image background */
+    --hero-background: #2E2F42;
+
+    /* Hero text color and button's*/
+    --hero-text: #FFFFFF;
+
+    /* Background color for card's and body*/
+    --body-background: #FFFFFF;
+}
+body{
+    /* Typography */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    
+    /* Visual */
+    color: var(--text);
+    background-color: var(--body-background);
+}
+
+/* ------------------------------------------------------------------- */
+/* Сommon styles */
+/* ------------------------------------------------------------------- */
+
+/* class for hidden header */
+.visually-hidden {
+    /* Positioning */
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+
+    /* Visual */
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+}
+/* class for header with the same style */
+.second-level-header{
+    /* Typography */
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    
+    /* Visual */
+    color: var(--dark);
+}
+/* class that hide all dots in list's */
+.listDecoration{
+    /* Visual */
+    list-style-type: none;
+}
+/* class that hide all underlines in link's*/
+.linkDecoration{
+    /* Visual */
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------- */
+/* Logo */
+/* ------------------------------------------------------------------- */
+.logo{
+    /* Typography */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    /* Visual */
+    color: var(--dark);
+}
+.logo span {
+    /* Visual */
+    color: var(--primary-brand);
+}
+
+/* ------------------------------------------------------------------- */
+/* Navbar */
+/* ------------------------------------------------------------------- */
+.header{
+    border-bottom: 1px solid var(--accent);
+}
+.navigator-list-item-link{
+    /* Typography */
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    
+    /* Visual */
+    color: var(--dark);
+}
+.navigator-list-item-link:hover{
+    /* Visual */
+    color: var(--pressed-state);
+}
+.navigator-list-item-link:focus{
+    /* Visual */
+    color: var(--pressed-state);
+}
+.address{
+    /* Typography */
+    font-style: normal;
+}
+.address-list-item-link{
+    /* Typography */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    
+    /* Visual */
+    color: var(--text);
+}
+.address-list-item-link:hover{
+    /* Visual */
+    color: var(--pressed-state);
+}
+.address-list-item-link:focus{
+    /* Visual */
+    color: var(--pressed-state);
+}
+
+/* ------------------------------------------------------------------- */
+/* Footer */
+/* ------------------------------------------------------------------- */
+.footer{
+    /* Visual */
+    background-color: var(--dark);
+}
+.footer > .logo {
+    /* Visual */
+    color: var(--light);
+}
+.footer-paragraph{
+    /* Typography */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    
+    /* Visual */
+    color: var(--accent);
+}
+
+/* ------------------------------------------------------------------- */
+/* index.html */
+/* ------------------------------------------------------------------- */
+
+/* ---------- First block ---------- */
+.firstBlock{
+    /* Visual */
+    background-color: var(--hero-background);
+}
+.firstBlock-header{
+    /* Typography */
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.02em;
+    
+    /* Visual */
+    color: var(--hero-text);
+}
+.firstBlock-button{
+    /* Typography */
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+    /* Visual */
+    background-color: var(--primary-brand);    
+    color: var(--hero-text);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+.firstBlock-button:hover{
+    /* Visual */
+    background-color: var(--pressed-state);
+}
+.firstBlock-button:focus{
+    /* Visual */
+    background-color: var(--pressed-state);
+}
+
+/* ---------- Second block ---------- */
+.secondBlock-list-item-header{
+    /* Typography */
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    
+    /* Visual */
+    color: var(--dark);
+}
+.secondBlock-list-item-paragraph{
+    /* Typography */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+/* ---------- Fourth block ---------- */
+.fourthBlock{
+    /* Visual */
+    background-color: var(--light);
+}
+.fourthBlock-list-item{
+    /* Visual */
+    background-color: var(--body-background);
+}
+.fourthBlock-list-item-header{
+    /* Typography */
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    /* Visual */
+    color: var(--dark);
+}
+.fourthBlock-list-item-paragraph{
+    /* Typography */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+/* ------------------------------------------------------------------- */
+/* portfolio.html */
+/* ------------------------------------------------------------------- */
+
+/* ---------- Filter ---------- */
+.filters-list-item-button{
+    /* Typography */
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+    /* Visual */
+    padding: 12px 24px;
+    background: var(--light);
+    border: 1px solid var(--accent);
+    color: var(--primary-brand);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.filters-list-item-button:hover{
+    /* Visual */
+    background: var(--pressed-state);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+                0px 2px 1px rgba(0, 0, 0, 0.08), 
+                0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: var(--hero-text);
+}
+.filters-list-item-button:focus{
+    /* Visual */
+    background: var(--pressed-state);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+                0px 2px 1px rgba(0, 0, 0, 0.08), 
+                0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: var(--hero-text);
+}
+
+/* ---------- Portfolio ---------- */
+.portfolioList-list-header{
+    /* Typography */
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    /* Visual */
+    color: var(--dark);
+}
+.portfolioList-list-paragraph{
+    /* Typography */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
