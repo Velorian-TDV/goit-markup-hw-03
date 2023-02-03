@@ -1,6 +1,16 @@
 /* ------------------------------------------------------------------- */
+/* Declaration order cheet sheet */
+/* ------------------------------------------------------------------- */
+    /* Positioning */
+    /* Box model */
+    /* Typography */
+    /* Visual */
+    /* Misc */
+
+/* ------------------------------------------------------------------- */
 /* Global */
 /* ------------------------------------------------------------------- */
+
 :root{
     /* CTAs, Focused, Active states, Links */
     --primary-brand: #4D5AE5;
@@ -47,21 +57,44 @@ body{
     color: var(--text);
     background-color: var(--body-background);
 }
+h1,h2,h3,h4,h5,h6,ul{
+    /* Positioning */
+    padding: 0px;
+    margin: 0px;
+}
 
 /* ------------------------------------------------------------------- */
 /* Сommon styles */
 /* ------------------------------------------------------------------- */
 
+/* wrapper class (container) */
+.container{
+    /* Positioning */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    /* Box model */
+    width: 1158px;
+    display: inherit;
+}
+/* cross axis align for wrapper (container) */
+.container-align{
+    /* Positioning */
+    align-items: center;
+}
 /* class for hidden header */
 .visually-hidden {
     /* Positioning */
     position: absolute;
     white-space: nowrap;
-    width: 1px;
-    height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
+
+    /* Box model */
+    width: 1px;
+    height: 1px;
 
     /* Visual */
     border: 0;
@@ -95,6 +128,7 @@ body{
 /* ------------------------------------------------------------------- */
 /* Logo */
 /* ------------------------------------------------------------------- */
+
 .logo{
     /* Typography */
     font-family: 'Raleway', sans-serif;
@@ -103,7 +137,14 @@ body{
     line-height: 1.33;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    
+
+    /* Positioning */
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    /* Box model */
+    display: block;
+
     /* Visual */
     color: var(--dark);
 }
@@ -115,8 +156,28 @@ body{
 /* ------------------------------------------------------------------- */
 /* Navbar */
 /* ------------------------------------------------------------------- */
+
 .header{
+    /* Visual */
     border-bottom: 1px solid var(--accent);
+
+    /* Box model */
+    display: flex;
+}
+.navigator{
+    /* Box model */
+    display: flex;
+}
+.navigator-list{
+    /* Box model */
+    display: flex;
+    
+    /* Positioning */
+    margin: 0px 0px 0px 76px;
+}
+.navigator-list-item:not(:last-child){
+    /* Positioning */
+    margin-right: 40px;
 }
 .navigator-list-item-link{
     /* Typography */
@@ -124,7 +185,14 @@ body{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    
+
+    /* Positioning */
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    /* Box model */
+    display: block;
+
     /* Visual */
     color: var(--dark);
 }
@@ -139,6 +207,17 @@ body{
 .address{
     /* Typography */
     font-style: normal;
+
+    /* Positioning */
+    margin-left: auto;
+}
+.address-list{
+    /* Box model */
+    display: flex;
+}
+.address-list-item:not(:last-child){
+    /* Positioning */
+    margin-right: 40px;
 }
 .address-list-item-link{
     /* Typography */
@@ -146,7 +225,14 @@ body{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    
+
+    /* Box model */
+    display: block;
+
+    /* Positioning */
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     /* Visual */
     color: var(--text);
 }
@@ -162,6 +248,7 @@ body{
 /* ------------------------------------------------------------------- */
 /* Footer */
 /* ------------------------------------------------------------------- */
+
 .footer{
     /* Visual */
     background-color: var(--dark);
@@ -186,6 +273,7 @@ body{
 /* ------------------------------------------------------------------- */
 
 /* ---------- First block ---------- */
+
 .firstBlock{
     /* Visual */
     background-color: var(--hero-background);
@@ -227,6 +315,7 @@ body{
 }
 
 /* ---------- Second block ---------- */
+
 .secondBlock-list-item-header{
     /* Typography */
     font-weight: 500;
@@ -246,6 +335,7 @@ body{
 }
 
 /* ---------- Fourth block ---------- */
+
 .fourthBlock{
     /* Visual */
     background-color: var(--light);
@@ -279,6 +369,7 @@ body{
 /* ------------------------------------------------------------------- */
 
 /* ---------- Filter ---------- */
+
 .filters-list-item-button{
     /* Typography */
     font-family: inherit;
@@ -313,6 +404,7 @@ body{
 }
 
 /* ---------- Portfolio ---------- */
+
 .portfolioList-list-header{
     /* Typography */
     font-weight: 500;
