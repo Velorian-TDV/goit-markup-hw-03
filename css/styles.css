@@ -57,10 +57,14 @@ body{
     color: var(--text);
     background-color: var(--body-background);
 }
-h1,h2,h3,h4,h5,h6,ul{
+h1,h2,h3,h4,h5,h6,p,ul{
     /* Positioning */
     padding: 0px;
     margin: 0px;
+}
+img{
+    /* Box model */
+    display: block;
 }
 
 /* ------------------------------------------------------------------- */
@@ -252,10 +256,15 @@ h1,h2,h3,h4,h5,h6,ul{
 .footer{
     /* Visual */
     background-color: var(--dark);
+
+    padding: 100px 0px 100px 0px;
 }
-.footer > .logo {
+.footer.logo {
     /* Visual */
     color: var(--light);
+
+    /* Positioning */
+    padding: 0px;
 }
 .footer-paragraph{
     /* Typography */
@@ -263,6 +272,10 @@ h1,h2,h3,h4,h5,h6,ul{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    /* Positioning */
+    width: 264px;
+    margin-top: 16px;
     
     /* Visual */
     color: var(--accent);
@@ -277,6 +290,10 @@ h1,h2,h3,h4,h5,h6,ul{
 .firstBlock{
     /* Visual */
     background-color: var(--hero-background);
+
+    /* Positioning */
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 .firstBlock-header{
     /* Typography */
@@ -286,6 +303,13 @@ h1,h2,h3,h4,h5,h6,ul{
     text-align: center;
     letter-spacing: 0.02em;
     
+    /* Box model */
+    display: block;
+    width: 500px; /* !!! */
+
+    /* Positioning */
+    margin: 0 auto;
+
     /* Visual */
     color: var(--hero-text);
 }
@@ -296,6 +320,14 @@ h1,h2,h3,h4,h5,h6,ul{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
+
+    /* Box model */
+    display: block;
+    width: 179px;
+
+    /* Positioning */
+    padding: 16px 32px 16px 32px;
+    margin: 48px auto 0px auto;
 
     /* Visual */
     background-color: var(--primary-brand);    
@@ -316,12 +348,29 @@ h1,h2,h3,h4,h5,h6,ul{
 
 /* ---------- Second block ---------- */
 
+.secondBlock-list{
+    /* Box model */
+    display: flex;
+
+    /* Positioning */
+    margin-top: 120px;
+}
+.secondBlock-list-item{
+    /* Box model */
+    min-width: 268px; /* !!! */
+}
+.secondBlock-list-item:not(:last-child){
+    margin-right: 24px;
+}
 .secondBlock-list-item-header{
     /* Typography */
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+
+    /* Positioning */
+    margin-bottom: 8px;
     
     /* Visual */
     color: var(--dark);
@@ -334,15 +383,52 @@ h1,h2,h3,h4,h5,h6,ul{
     letter-spacing: 0.02em;
 }
 
+/* ---------- Third block ---------- */
+
+.thirdBlock{
+    /* Positioning */
+    margin-top: 120px;
+}
+.thirdBlock-list{
+    /* Box model */
+    display: flex;
+
+    /* Positioning */
+    margin-top: 72px;
+}
+.thirdBlock-list-item:not(:last-child){
+    /* Positioning */
+    margin-right: 24px;
+}
+
 /* ---------- Fourth block ---------- */
 
 .fourthBlock{
+    /* Positioning */
+    margin-top: 120px;
+    padding: 120px 0px 120px 0px;
+
     /* Visual */
     background-color: var(--light);
+}
+.fourthBlock-list{
+    /* Box model */
+    display: flex;
+
+    /* Positioning */
+    margin-top: 72px;
 }
 .fourthBlock-list-item{
     /* Visual */
     background-color: var(--body-background);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+}
+.fourthBlock-list-item:not(:last-child){
+    /* Positioning */
+    margin-right: 24px;
 }
 .fourthBlock-list-item-header{
     /* Typography */
@@ -351,6 +437,9 @@ h1,h2,h3,h4,h5,h6,ul{
     line-height: 1.2;
     text-align: center;
     letter-spacing: 0.02em;
+
+    /*  Positioning */
+    margin: 32px 0px 8px 0px;
 
     /* Visual */
     color: var(--dark);
@@ -362,6 +451,9 @@ h1,h2,h3,h4,h5,h6,ul{
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.02em;
+
+    /*  Positioning */
+    margin-bottom: 32px;
 }
 
 /* ------------------------------------------------------------------- */
@@ -370,6 +462,18 @@ h1,h2,h3,h4,h5,h6,ul{
 
 /* ---------- Filter ---------- */
 
+.filters-list{
+    /* Box mode */
+    display: flex;
+    justify-content: center;
+
+    /* Positionin */
+    margin: 0px 0px 72px 0px;
+}
+.filters-list-item:not(:last-child){
+    /* Positioning */
+    margin-right: 24px;
+}
 .filters-list-item-button{
     /* Typography */
     font-family: inherit;
@@ -405,12 +509,45 @@ h1,h2,h3,h4,h5,h6,ul{
 
 /* ---------- Portfolio ---------- */
 
+.portfolio{
+    /* Positioning */
+    margin: 96px 0px 120px 0px;
+}
+.portfolioList{
+    /* Box model */
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolioList-item{
+    /* Positioning */
+    margin: 0px 24px 48px 0px;
+}
+.portfolioList-item:nth-last-child(3n+1){
+    /* Positioning */
+    margin-right: 0px;
+}
+.portfolioList-item:nth-last-child(-n+3){
+    /* Positioning */
+    margin-bottom: 0px;
+}
+.portfolioList-item-textWrapper{
+    /* Visual */
+    border-left: 1px solid var(--accent);
+    border-right: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
+
+    /* Positioning */
+    padding: 32px 0px 32px 16px;
+}
 .portfolioList-list-header{
     /* Typography */
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+
+    /* Box model */
+    display: block;
 
     /* Visual */
     color: var(--dark);
@@ -421,4 +558,10 @@ h1,h2,h3,h4,h5,h6,ul{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    /* Positioning */
+    margin-top: 8px;
+    
+    /* Box model */
+    display: block;
 }
