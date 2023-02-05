@@ -65,6 +65,8 @@ h1,h2,h3,h4,h5,h6,p,ul{
 img{
     /* Box model */
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* ------------------------------------------------------------------- */
@@ -80,12 +82,14 @@ img{
 
     /* Box model */
     width: 1158px;
-    display: inherit;
+    /* display: inherit; */
 }
 /* cross axis align for wrapper (container) */
 .container-align{
     /* Positioning */
     align-items: center;
+    /* Box model */
+    display: inherit;
 }
 /* class for hidden header */
 .visually-hidden {
@@ -263,6 +267,9 @@ img{
     /* Visual */
     color: var(--light);
 
+    /* Box model */
+    display: inline-block;
+
     /* Positioning */
     padding: 0px;
 }
@@ -305,7 +312,7 @@ img{
     
     /* Box model */
     display: block;
-    width: 500px; /* !!! */
+    width: 496px;
 
     /* Positioning */
     margin: 0 auto;
@@ -348,16 +355,16 @@ img{
 
 /* ---------- Second block ---------- */
 
+.secondBlock{
+    padding: 120px 0;
+}
 .secondBlock-list{
     /* Box model */
     display: flex;
-
-    /* Positioning */
-    margin-top: 120px;
 }
 .secondBlock-list-item{
     /* Box model */
-    min-width: 268px; /* !!! */
+    flex-basis: calc((100% - 3*24px)/4);
 }
 .secondBlock-list-item:not(:last-child){
     margin-right: 24px;
@@ -386,8 +393,7 @@ img{
 /* ---------- Third block ---------- */
 
 .thirdBlock{
-    /* Positioning */
-    margin-top: 120px;
+    padding-bottom: 120px;
 }
 .thirdBlock-list{
     /* Box model */
@@ -395,6 +401,9 @@ img{
 
     /* Positioning */
     margin-top: 72px;
+}
+.thirdBlock-list-item{
+    flex-basis: calc((100% - 2*24px)/3);
 }
 .thirdBlock-list-item:not(:last-child){
     /* Positioning */
@@ -405,8 +414,7 @@ img{
 
 .fourthBlock{
     /* Positioning */
-    margin-top: 120px;
-    padding: 120px 0px 120px 0px;
+    padding: 120px 0px;
 
     /* Visual */
     background-color: var(--light);
@@ -419,6 +427,9 @@ img{
     margin-top: 72px;
 }
 .fourthBlock-list-item{
+    /* Box model */
+    flex-basis: calc((100% - 3*24px)/4);
+
     /* Visual */
     background-color: var(--body-background);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
@@ -439,7 +450,7 @@ img{
     letter-spacing: 0.02em;
 
     /*  Positioning */
-    margin: 32px 0px 8px 0px;
+    margin-bottom: 8px;
 
     /* Visual */
     color: var(--dark);
@@ -451,9 +462,10 @@ img{
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.02em;
-
-    /*  Positioning */
-    margin-bottom: 32px;
+}
+.filters-list-item-textWrapper{
+    /* Positioning */
+    padding: 32px 16px;
 }
 
 /* ------------------------------------------------------------------- */
@@ -482,9 +494,11 @@ img{
     line-height: 1.5;
     letter-spacing: 0.04em;
 
-    /* Visual */
+    /* Positioning */
     padding: 12px 24px;
-    background: var(--light);
+
+    /* Visual */
+    background-color: var(--light);
     border: 1px solid var(--accent);
     color: var(--primary-brand);
     border-radius: 4px;
@@ -492,7 +506,8 @@ img{
 }
 .filters-list-item-button:hover{
     /* Visual */
-    background: var(--pressed-state);
+    border: 1px solid transparent;
+    background-color: var(--pressed-state);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
                 0px 2px 1px rgba(0, 0, 0, 0.08), 
                 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -500,6 +515,7 @@ img{
 }
 .filters-list-item-button:focus{
     /* Visual */
+    border: 1px solid transparent;
     background: var(--pressed-state);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
                 0px 2px 1px rgba(0, 0, 0, 0.08), 
@@ -511,7 +527,7 @@ img{
 
 .portfolio{
     /* Positioning */
-    margin: 96px 0px 120px 0px;
+    padding: 96px 0px 120px 0px;
 }
 .portfolioList{
     /* Box model */
@@ -519,6 +535,9 @@ img{
     flex-wrap: wrap;
 }
 .portfolioList-item{
+    /* Box model */
+    flex-basis: calc((100% - 2*24px)/3);
+
     /* Positioning */
     margin: 0px 24px 48px 0px;
 }
@@ -537,7 +556,7 @@ img{
     border-bottom: 1px solid var(--accent);
 
     /* Positioning */
-    padding: 32px 0px 32px 16px;
+    padding: 32px 16px;
 }
 .portfolioList-list-header{
     /* Typography */
